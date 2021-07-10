@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- CSS import -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css">`
 </head>
 
 <body>
@@ -34,12 +34,12 @@
             $ pwd   # 현재 폴더 위치 확인
 
       step 3. Vue-CLI version 2 다운로드
-            $ npm install vue-cli -g
+            $ npm install -g @vue/cli     # Vue-CLI
             $ vue -V
-            vue/cli 2.9.6
+            vue/cli 4.x.x
 
       step 4. Vue 프로젝트 생성
-            $ vue init webpack-simple
+            $ vue create webpack-simple
 
       step 5. Vue 라이브러리 다운로드
             $ ls            # package.json 이 있는지 확인
@@ -51,7 +51,7 @@
             index.html  node_modules  package.json  package-lock.json  README.md  src  webpack.config.js
 
       step 6. Vue 프로젝트 실행
-            $ npm run dev
+            $ npm run serve
 
       step 7. 실습 파일 복사
             Header.vue, Footer.vue, App.vue 파일을 webpack-test/src/ 에 붙여넣기

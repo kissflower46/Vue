@@ -243,3 +243,49 @@
         </div>
     </body>
 </html>
+
+<script>
+
+    //
+    function Goo(name, age) {
+        this.name = name;
+        this.run = function () { return this.name; };
+    };
+    var goo = new Goo('goo', 31);
+
+    // 객체 리터럴( {} )을 이용하여 객체 생성합니다.
+    var foo = {
+        name  : 'foo',
+        age   : 30,
+        array : [1,4,5,5],
+        run   : function () {
+            return this.name;
+        },
+    };
+
+    //1.이름
+    console.log(foo.name);
+    //2.foo의 age 대괄호 사용
+    console.log(foo['age']);
+    //3.foo에 gender를 추가하고, man을 설정
+    foo.gender = 'man';
+    console.log(foo.gender);
+    //4.foo의 name을 bar로 변경
+    foo.name = 'bar';
+    console.log(foo.name);
+
+    var Dog = {
+        name : 'Fido'
+        , weight : 40
+        , breed : 'Mixed'
+        , loves : ['walks', 'fetching ball']
+    }
+
+    var obj = {
+        name : 'Nature of Code'
+        , price : 30000
+        , Author : '다니엘'
+        , ISBN : '9788968481901'
+        , pageCnt : '620페이지'
+    }
+</script>
