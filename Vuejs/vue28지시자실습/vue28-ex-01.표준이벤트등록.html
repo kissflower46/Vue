@@ -162,8 +162,7 @@
             imageclick : function(event) {
                 console.log(event.target.href);
                 this.$set( this.$data, "img_image3", event.target.href);
-                const router = 
-                debugger;
+                event.preventDefault();
             }
         },
         components: {
