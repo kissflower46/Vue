@@ -59,3 +59,47 @@
 </body>
 
 </html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js">
+    /* 자바스크립트로 컴파일러. ES6-->ES5, JSX-->ES5 */
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.development.js">
+    /* import React, { Component, PureComponent } from "react" */
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.development.js">
+    /* import ReactDOM from "react-dom" */
+</script>
+<script type="text/babel">
+    class King extends React.Component{
+        render() {
+            return (
+                <div>
+                    <span>{this.props.name}</span>
+                    {this.props.children}
+                </div>//children은 부모태그 안의 내용을 가져온다. =>span
+            )
+        }
+    }
+
+    class KingContainer extends React.Component {
+        state = {
+            arr : ["세종대왕", "이순신", "광개토", "왕1건"]
+        };
+        render() { // JSX로 화면 만들기
+            const kings = this.state.arr.map( ( value, index, values ) => {
+                return <King key={index} name={value}></King>
+            });
+            return (
+                <div>
+                    {kings}
+                    <br /><br />
+                    <King name={"세종대왕"}><span>1</span></King>
+                </div>
+            )
+        }
+    };
+
+    ReactDOM.render(
+        <KingContainer></KingContainer>
+        , document.getElementById("app")
+    )
