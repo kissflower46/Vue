@@ -525,7 +525,7 @@
                 this.$set( this.$data.todoItems, indexFind, newobj)
             }
             , removeTodo(id, index) {
-                this.$data.todoItems.splice(index, 1);
+                this.$data.todoItems.splice(id, 1);
             }
             , clearAll() {
                 this.$data.todoItems = [];

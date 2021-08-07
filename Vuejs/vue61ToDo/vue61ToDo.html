@@ -646,7 +646,7 @@
                          * 서버로 보내는 데이터. 예시) { todo: "여행가기", done: false }
                          * params: JSON.stringify({ todo: "여행가기", done: false })
                          *
-                         * axios 호출 성공 하면 mutations.commit("todo", res.data); 호출
+                         * axios 호출 성공 하면 mutations.commit("addTodo", res.data); 호출
                          */
                     },
                     doneToggle: function (mutations, param) {
@@ -659,7 +659,7 @@
                          * 서버로 보내는 데이터. 예시) { id:2, index:1 }
                          * params: JSON.stringify({ id, index })
                          *
-                         * axios 호출 성공 하면 mutations.commit("todo", res.data); 호출
+                         * axios 호출 성공 하면 mutations.commit("doneToggle", res.data); 호출
                          */
                     },
                     removeTodo: function (mutations, param) {
@@ -671,7 +671,7 @@
                          * 서버로 보내는 데이터. 예시) { id:2, index:1 }
                          * params: JSON.stringify({ id, index })
                          *
-                         * axios 호출 성공 하면 mutations.commit("todo", res.data); 호출
+                         * axios 호출 성공 하면 mutations.commit("removeTodo", res.data); 호출
                          */
                     },
                     clearAll: function (mutations) {
@@ -684,7 +684,7 @@
                          * 서버로 보내는 데이터. 예시) {  }
                          * params: null
                          *
-                         * axios 호출 성공 하면 mutations.commit("todo", res.data); 호출
+                         * axios 호출 성공 하면 mutations.commit("clearAll", res.data); 호출
                          */
                     }
                 },
