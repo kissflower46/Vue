@@ -84,22 +84,18 @@
         <header>
             Header
         </header>
-
         <!-- ComponentContent -->
         <div id="content">
             <p>Content</p>
-
             <!-- ComponentAside -->
             <aside>
                 Aside
             </aside>
-
             <!-- ComponentContentList -->
             <div id="content-list">
                 List
             </div>
         </div>
-
         <!-- ComponentFooter -->
         <footer>
             Footer
@@ -107,4 +103,90 @@
     </div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.development.js"></script>
+<script type="text/babel">
+
+    console.log(React);
+
+    class ComponentHeader extends React.Component {
+        state = {
+        }
+        render() { // JSX로 화면 만들기
+            return (
+                <div>
+                    <header>
+                        Header
+                    </header>
+                </div>
+            )
+        }
+    };
+
+    class ComponentAside extends React.Component {
+        state = {
+        }
+        render() { // JSX로 화면 만들기
+            return (
+                <div>
+                    <aside>
+                        Aside
+                    </aside>
+                </div>
+            )
+        }
+    };
+    class ComponentContentList extends React.Component {
+        state = {
+        }
+        render() { // JSX로 화면 만들기
+            return (
+                <div>
+                    <div id="content-list">
+                        List
+                    </div>
+                </div>
+            )
+        }
+    };
+    class ComponentContent extends React.Component {
+        state = {
+        }
+        render() { // JSX로 화면 만들기
+            return (
+                <div>
+                    <div id="content">
+                        <p>Content</p>
+                        <ComponentAside></ComponentAside>
+                        <ComponentContentList></ComponentContentList>
+                    </div>
+                </div>
+            )
+        }
+    };
+    class ComponentFooter extends React.Component {
+        state = {
+        }
+        render() { // JSX로 화면 만들기
+            return (
+                <div>
+                    <footer>
+                        Footer
+                    </footer>
+                </div>
+            )
+        }
+    };
+
+    ReactDOM.render(
+        <React.Fragment>
+            <ComponentHeader></ComponentHeader>
+            <ComponentContent></ComponentContent>
+            <ComponentFooter></ComponentFooter>
+        </React.Fragment>
+        , document.getElementById("app")
+    )
+
+</script>
 </html>
