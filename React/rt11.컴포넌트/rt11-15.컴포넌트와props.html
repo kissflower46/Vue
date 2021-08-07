@@ -71,7 +71,7 @@
         };
         render() { // JSX로 화면 만들기
             const hellowrolds = this.state.arr.map( (value, index, values) => {
-                return <HelloWorld index={value}></HelloWorld>;
+                return <HelloWorld key={index} index={value}></HelloWorld>;
             });
             return (
                 <React.Fragment>
