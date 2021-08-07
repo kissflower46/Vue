@@ -100,6 +100,11 @@
                             You have {unreadMessages.length} unread messages.
                         </h2>
                     )}
+                    { (unreadMessages===null || unreadMessages.length === 0) && (
+                        <h2>
+                            You have not messages.
+                        </h2>
+                    )}
                 </div>
             )
         }

@@ -27,5 +27,36 @@
 
     <div id="app"></div>
 </body>
-
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.development.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.development.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.2.0/react-router-dom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.2/react-redux.js"></script><script src="https://unpkg.com/immer"></script>
+<script type="text/babel">
+
+    const todoList = [
+            { taskName: "빨래하기", finished: false },
+            { taskName: "공부하기", finished: true },
+            { taskName: "게임하기", finished: true },
+        ]
+
+    class TodoList extends React.Component {
+        render() { // JSX로 화면 만들기
+            console.log(this.props.todoList);
+            console.log({todoList});
+            return (
+                <div>
+                    {
+                        this.props.todoList.map( (value, index, values) => {
+                            return (
+                                <li key={index}>{value.taskName}</li>
+                            );
+                        })
+                    }
+                </div>
+            )
+        }
+    };
+
+    ReactDOM.render(
+        <TodoList todoList ={todoList }></TodoList>
+        , document.getElementById("app")
+    )
+</script>
