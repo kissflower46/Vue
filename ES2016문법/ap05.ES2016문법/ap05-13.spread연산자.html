@@ -39,4 +39,46 @@
     </xmp>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js">/* 자바스크립트로 컴파일러. ES6-->ES5, JSX-->ES5 */</script>
+<script type="text/babel">
+    const cities = ['서울', '부산', '제주'];
+    console.log( cities[0], cities[1], cities[2] );
+
+    const east = ['u', 'k', 't'];
+    const west = ['n', 'c', 'g'];
+    const countries = [...east, ...west];
+    console.log(countries);
+
+    let likes = ["경포호", '화진포', '송지호', '청초호'];
+    let [first, ...rest] = likes;
+    console.log( first );
+    console.log( rest );
+
+    let [city1, ...cityrest] = [...east, ...west];
+    console.log( city1 );
+    console.log( cityrest );
+/////
+    const car1 = {
+        type : "t1"
+        , color : "S1"
+        , model : 2017
+    }
+    const car2 = {
+        type : "t2"
+        , color : "S2"
+        , model : 2019
+    }
+
+    const {type} = car1;
+    console.log( type );
+
+    const func = function( {type} ){
+        console.log( type );
+    }
+
+    func( {...car1, ...car2} );
+
+
+
+</script>
 </html>
